@@ -1,99 +1,15 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ngo Quang Kiet — Automotive Engineering Portfolio</title>
-<meta name="description" content="Automotive engineering portfolio featuring real field survey, Siemens NX, ANSYS and electronics work.">
-<style>
-:root{--ink:#0b1f3a;--muted:#607187;--blue:#0878d1;--cyan:#21b7ff;--navy:#09294e;--line:#dfe9f3;--paper:#f4f8fc}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,#fff 0%,#f5f9fd 100%)}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}
-nav{position:sticky;top:12px;z-index:20;width:min(1180px,calc(100% - 24px));margin:12px auto 0;padding:14px 18px;border:1px solid #fff;background:#ffffffed;backdrop-filter:blur(14px);border-radius:20px;box-shadow:0 12px 34px #0b2d5514;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;letter-spacing:-.02em}.brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;margin-top:2px}.links{display:flex;align-items:center;gap:22px;font-size:13px;font-weight:800}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:13px;background:var(--navy);color:#fff;font-weight:800}
-.hero{display:grid;grid-template-columns:1.02fr .98fr;gap:42px;align-items:center;padding:72px 0 58px}.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);font-weight:900}.hero h1{font-size:clamp(46px,6.4vw,78px);line-height:.97;letter-spacing:-.055em;margin:14px 0 20px}.hero h1 span{color:var(--blue)}.lead{font-size:18px;line-height:1.72;color:var(--muted);max-width:660px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.chip{padding:8px 11px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:12px;font-weight:800;color:#41617f}
-.hero-visual{display:grid;grid-template-columns:1.15fr .85fr;grid-template-rows:auto auto;gap:14px;padding:16px;background:linear-gradient(145deg,#082a57,#0b4f96 62%,#0d88d6);border-radius:32px;box-shadow:0 30px 70px #113b6730}.hero-card{overflow:hidden;border-radius:22px;background:#fff;min-height:190px}.hero-card img{width:100%;height:100%;object-fit:cover}.hero-card.field{grid-row:1/3;min-height:430px}.hero-card.field img{object-position:center}.hero-card.nx,.hero-card.ansys{min-height:205px}.hero-card.nx img,.hero-card.ansys img{object-fit:cover}
-section{padding:60px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:26px}.section-head h2{font-size:clamp(30px,4.2vw,48px);line-height:1.02;letter-spacing:-.04em;margin:8px 0 0}.section-head p{max-width:540px;margin:0;color:var(--muted);line-height:1.7}.panel{background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:0 16px 40px #0b2d550d}.field-layout{display:grid;grid-template-columns:1.12fr .88fr;gap:20px}.field-gallery{padding:18px;display:grid;grid-template-columns:1.35fr .65fr;gap:14px}.field-photo{overflow:hidden;border-radius:20px;background:#eaf2fa}.field-photo img{width:100%;height:100%;object-fit:cover}.field-photo.robex{min-height:520px}.field-photo.hamm{min-height:520px}.field-copy{padding:30px}.field-copy h3,.copy-card h3{font-size:30px;letter-spacing:-.035em;margin:8px 0 14px}.field-copy p,.copy-card p{color:var(--muted);line-height:1.75}.bullets{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:13px}.bullets li{position:relative;padding-left:20px;color:#40566e;line-height:1.65}.bullets li:before{content:"";position:absolute;left:0;top:.65em;width:8px;height:8px;border-radius:50%;background:var(--cyan)}
-.case{display:grid;grid-template-columns:1.05fr .95fr;gap:20px}.visual-card{overflow:hidden;min-height:390px}.visual-card img{width:100%;height:100%;object-fit:cover}.copy-card{padding:30px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tags span{font-size:11px;font-weight:800;padding:8px 10px;border-radius:999px;background:#edf6ff;color:#1d6199;border:1px solid #d8eaff}.dark{background:linear-gradient(145deg,#08284e,#0c427d);color:#fff}.dark p,.dark .bullets li{color:#d4e3f2}.dark .tags span{background:#ffffff14;color:#fff;border-color:#ffffff1f}
-.contact{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:30px;border-radius:28px;background:linear-gradient(135deg,#071f44,#0d5ca8);color:#fff}.contact p{color:#cfe0f2;margin:8px 0 0}.contact .btn{background:#fff;color:var(--navy)}footer{padding:45px 0 70px}
-@media(max-width:900px){.hero,.field-layout,.case{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.hero-visual{grid-template-columns:1fr 1fr}.hero-card.field{grid-row:auto;grid-column:1/3;min-height:320px}.field-gallery{grid-template-columns:1fr 1fr}.field-photo.robex,.field-photo.hamm{min-height:320px}.links a:not(.btn){display:none}.contact{align-items:flex-start;flex-direction:column}}
-@media(max-width:600px){.field-gallery{grid-template-columns:1fr}.hero-visual{grid-template-columns:1fr}.hero-card.field{grid-column:auto}.hero-card.field,.hero-card.nx,.hero-card.ansys{min-height:240px}.field-photo.robex,.field-photo.hamm{min-height:260px}.hero{padding-top:42px}}
-</style>
-</head>
-<body>
-<nav>
-  <div class="brand">NGO QUANG KIET<small>Automotive Engineering · HCMUT</small></div>
-  <div class="links">
-    <a href="#field">Field</a><a href="#nx">NX</a><a href="#ansys">ANSYS</a><a href="#electronics">Electronics</a>
-    <a class="btn" href="cv.html" target="_blank">Open CV</a>
-  </div>
-</nav>
-
-<header class="wrap hero">
-  <div>
-    <div class="eyebrow">Automotive Engineering Portfolio</div>
-    <h1>From <span>real machines</span><br>to CAD, CAE<br>& electronics.</h1>
-    <p class="lead">Automotive Engineering student at Ho Chi Minh City University of Technology (HCMUT), developing hands-on R&D experience through field investigation, Siemens NX, ANSYS and electronics-oriented prototyping in the context of FuelGuard.</p>
-    <div class="chips"><span class="chip">Siemens NX</span><span class="chip">ANSYS Mechanical</span><span class="chip">Field Survey</span><span class="chip">Sensor Integration</span><span class="chip">OBD / CAN fundamentals</span></div>
-  </div>
-  <div class="hero-visual">
-    <div class="hero-card field"><img src="field-robex.svg" alt="ROBEX field survey"></div>
-    <div class="hero-card nx"><img src="assets/nx.webp" alt="Siemens NX work"></div>
-    <div class="hero-card ansys"><img src="assets/ansys.webp" alt="ANSYS analysis"></div>
-  </div>
-</header>
-
-<section id="field">
-  <div class="wrap">
-    <div class="section-head"><div><div class="eyebrow">01 · Field Survey</div><h2>ROBEX & HAMM — real operating context.</h2></div><p>Actual equipment observations are used as evidence of field-oriented engineering work, not as decorative thumbnails.</p></div>
-    <div class="field-layout">
-      <div class="panel field-gallery">
-        <div class="field-photo robex"><img src="field-robex.svg" alt="ROBEX excavator survey"></div>
-        <div class="field-photo hamm"><img src="field-hamm.svg" alt="HAMM equipment survey"></div>
-      </div>
-      <div class="panel field-copy">
-        <div class="eyebrow">Why it matters</div>
-        <h3>Observe first, then design.</h3>
-        <p>Field survey gives the R&D work a real operating context before moving into CAD, CAE and electronics.</p>
-        <ul class="bullets">
-          <li><b>Machine identification:</b> understand the actual asset and equipment configuration.</li>
-          <li><b>Installation reality:</b> vibration, dust, packaging and access affect sensor placement.</li>
-          <li><b>Diagnostics context:</b> inspect electrical and service areas before defining a monitoring workflow.</li>
-          <li><b>FuelGuard direction:</b> focus on fuel monitoring, abnormal-loss detection and equipment-health support.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ngo Quang Kiet — Automotive Engineering Portfolio</title><meta name="description" content="Ngo Quang Kiet automotive engineering portfolio - field investigation, Siemens NX, ANSYS, electronics and FuelGuard R&D workflow."><link rel="stylesheet" href="style.css"></head><body><div class="page-enter"><nav class="liquid"><a class="brand" href="index.html"><span class="brandmark">NQK</span><span>Ngo Quang Kiet<small>Automotive Engineering · HCMUT</small></span></a><div class="navlinks"><a class="active" href="index.html">Home</a><a class="" href="field.html">Field</a><a class="" href="nx.html">NX</a><a class="" href="ansys.html">ANSYS</a><a class="" href="electronics.html">Electronics</a><a class="" href="fuelguard.html">FuelGuard</a><a class="cv" href="cv.html" target="_blank">Open CV PDF</a></div></nav><main class="container page">
+<section class="hero">
+  <div class="reveal"><div class="eyebrow">Automotive Engineering Portfolio</div><h1>From <span class="grad">field evidence</span> to CAD, CAE & electronics.</h1><p class="lead">I work across the practical engineering chain: investigate real machines, translate observations into requirements, model in Siemens NX, evaluate in ANSYS, then connect the mechanical side with sensors, electronics and diagnostics for the FuelGuard R&D direction.</p><div class="actions"><a class="btn primary" href="field.html">Start with field investigation</a><a class="btn" href="fuelguard.html">View end-to-end workflow</a></div><div class="chiprow"><span class="chip">Siemens NX</span><span class="chip">ANSYS Mechanical</span><span class="chip">ROBEX & HAMM survey</span><span class="chip">Sensor integration</span><span class="chip">OBD/CAN fundamentals</span></div></div>
+  <div class="hero-stack reveal"><div class="hero-img one"><img src="field-hamm-machine.svg" alt="HAMM field survey"></div><div class="hero-img two"><img src="assets/nx.webp" alt="Siemens NX electronics assembly"></div><div class="hero-img three"><img src="assets/ansys.webp" alt="ANSYS result"></div><div class="portrait"><img src="assets/portrait.webp" alt="Ngo Quang Kiet"></div></div>
 </section>
-
-<section id="nx">
-  <div class="wrap">
-    <div class="section-head"><div><div class="eyebrow">02 · Siemens NX</div><h2>Modeling and assembly-oriented CAD work.</h2></div><p>Real NX screenshots are used to show practical software exposure rather than generic renders.</p></div>
-    <div class="case">
-      <div class="panel visual-card"><img src="assets/nx.webp" alt="Siemens NX assembly"></div>
-      <div class="panel copy-card"><h3>Selected Siemens NX work</h3><p>Working familiarity includes 3D modeling, assembly & constraints, drafting exposure, mechanical component design and CAD file handling. The focus is practical use and adapting engineering workflows as project needs change.</p><div class="tags"><span>3D Modeling</span><span>Assembly</span><span>Constraints</span><span>Part Navigator</span><span>CAD File Handling</span></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="ansys">
-  <div class="wrap">
-    <div class="section-head"><div><div class="eyebrow">03 · ANSYS Mechanical</div><h2>Analysis for engineering evaluation.</h2></div><p>CAE complements CAD with a verification mindset: inspect results and use them to support design decisions.</p></div>
-    <div class="case">
-      <div class="panel copy-card dark"><h3>CAE exposure</h3><ul class="bullets"><li>Static Structural workflow and result interpretation.</li><li>Stress & deformation evaluation.</li><li>Material strength / safety-factor concepts.</li><li>Basic thermal-analysis workflow.</li></ul><div class="tags"><span>Static Structural</span><span>Stress</span><span>Deformation</span><span>Thermal</span></div></div>
-      <div class="panel visual-card"><img src="assets/ansys.webp" alt="ANSYS Mechanical result"></div>
-    </div>
-  </div>
-</section>
-
-<section id="electronics">
-  <div class="wrap">
-    <div class="section-head"><div><div class="eyebrow">04 · Electronics & Prototype Thinking</div><h2>Connecting mechanical work with sensing and data.</h2></div><p>FuelGuard is multidisciplinary, so electronics-oriented experimentation is shown as part of the same engineering story.</p></div>
-    <div class="case">
-      <div class="panel visual-card"><img src="assets/wokwi.webp" alt="Wokwi electronics prototype"></div>
-      <div class="panel copy-card dark"><h3>FuelGuard R&D context</h3><p>Prototype work explores sensor integration, controller I/O, signal/data flow and diagnostics-oriented monitoring. Programming is used at a basic engineering level, with AI tools used to accelerate workflows while outputs are manually reviewed and verified.</p><div class="tags"><span>Sensor Integration</span><span>Wokwi</span><span>Python / C++ basic</span><span>OBD / CAN</span><span>AI-assisted workflow</span></div></div>
-    </div>
-  </div>
-</section>
-
-<footer><div class="wrap"><div class="contact"><div><div class="eyebrow" style="color:#8fd3ff">Ngo Quang Kiet</div><h2 style="margin:8px 0 0;font-size:34px">Automotive Engineering · R&D · Mechanical Design</h2><p>Ho Chi Minh City, Vietnam · ngokiet1412@gmail.com · +84 909224702</p></div><a class="btn" href="cv.html" target="_blank">View current CV</a></div></div></footer>
-</body>
-</html>
+<section class="section reveal"><div class="section-head"><div><div class="eyebrow">How I structure engineering work</div><h2>One continuous R&D loop, not isolated software skills.</h2></div><p>This is the project workflow I use to organize work: observe the asset, define the problem, build a model, analyze it, integrate electronics, then validate against field constraints.</p></div><div class="process">
+<div class="step liquid"><div class="n">1</div><h4>Survey</h4><p>Machine identity, operating environment, access, electrical/service areas.</p></div>
+<div class="step liquid"><div class="n">2</div><h4>Requirements</h4><p>Turn field observations into measurable design and monitoring constraints.</p></div>
+<div class="step liquid"><div class="n">3</div><h4>CAD</h4><p>Build or handle geometry, assemblies and packaging in Siemens NX.</p></div>
+<div class="step liquid"><div class="n">4</div><h4>CAE</h4><p>Evaluate stress, deformation and thermal behaviour in ANSYS.</p></div>
+<div class="step liquid"><div class="n">5</div><h4>Electronics</h4><p>Sensor/controller logic, simulated wiring, OBD/CAN and signal flow.</p></div>
+<div class="step liquid"><div class="n">6</div><h4>Validate</h4><p>Compare the design against real installation, vibration, dust and serviceability.</p></div>
+</div></section>
+<section class="section reveal"><div class="grid4"><div class="card liquid"><div class="kpi">Field</div><div class="label">ROBEX and HAMM observations with real machine and engine-bay evidence.</div></div><div class="card liquid"><div class="kpi">CAD</div><div class="label">NX modeling, assembly, constraints, component design and file handling.</div></div><div class="card liquid"><div class="kpi">CAE</div><div class="label">ANSYS structural and basic thermal evaluation workflows.</div></div><div class="card liquid"><div class="kpi">Data</div><div class="label">Basic Python/C++, sensor data, DSP concepts and OBD/CAN context.</div></div></div></section>
+</main><footer class="footer container"><div class="footerbox liquid"><div><h2>Ngo Quang Kiet</h2><p>Automotive Engineering · R&D · Mechanical Design · Vehicle Diagnostics</p></div><div class="actions"><a class="btn" href="mailto:ngokiet1412@gmail.com">ngokiet1412@gmail.com</a><a class="btn primary" href="cv.html" target="_blank">CV PDF</a></div></div></footer></div><script src="script.js"></script></body></html>
