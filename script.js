@@ -1,0 +1,3 @@
+const io = new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('show'); } }); }, {threshold:0.08});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+window.addEventListener('pointermove', function(e){ document.documentElement.style.setProperty('--mx', e.clientX + 'px'); document.documentElement.style.setProperty('--my', e.clientY + 'px'); });
