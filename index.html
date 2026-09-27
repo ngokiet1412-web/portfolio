@@ -4,22 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ngo Quang Kiet - Automotive Engineering Portfolio</title>
-  <meta name="description" content="Automotive engineering portfolio covering field investigation, Siemens NX, ANSYS and FuelGuard R&D.">
+  <meta name="description" content="Automotive engineering portfolio covering field investigation, Siemens NX, ANSYS, electronics and FuelGuard R&D.">
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="style.css?v=20260927-5">
+  <link rel="stylesheet" href="style.css?v=20260927-6">
 </head>
-<body>
+<body class="page-shell">
   <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
-
   <header class="top liquid-glass">
     <a class="brand" href="#profile">NGO QUANG KIET</a>
     <nav aria-label="Portfolio sections">
-      <a href="#profile">Profile</a>
-      <a href="#workflow">Workflow</a>
-      <a href="#cadcae">NX / ANSYS</a>
-      <a href="#robex">ROBEX</a>
-      <a href="#hamm">HAMM</a>
-      <a href="#fuelguard">FuelGuard</a>
+      <a href="#profile">Profile</a><a href="#workflow">Workflow</a><a href="nx.html">NX</a><a href="ansys.html">ANSYS</a><a href="electronics.html">Electronics</a><a href="field.html">Field</a><a href="#fuelguard">FuelGuard</a>
     </nav>
     <a class="cv" href="NgoQuangKiet_CV_FINAL.pdf" target="_blank" rel="noopener">Open CV <span aria-hidden="true">&#8599;</span></a>
   </header>
@@ -30,40 +24,30 @@
         <p class="eyebrow">01 / PROFILE</p>
         <h1>AUTOMOTIVE <span>ENGINEERING</span></h1>
         <p class="role">HCMUT - R&amp;D - Mechanical Design - Vehicle Diagnostics</p>
-        <p class="lead">Hands-on engineering that connects vehicle fundamentals, CAD/CAE, field investigation and a traceable technical workflow - from real evidence to design, simulation and practical problem solving.</p>
-        <div class="actions">
-          <a class="btn primary" href="#cadcae">View engineering work</a>
-          <a class="btn" href="NgoQuangKiet_CV_FINAL.pdf" target="_blank" rel="noopener">Open CV PDF</a>
-        </div>
+        <p class="lead">Hands-on engineering that connects vehicle fundamentals, CAD/CAE, electronics and field investigation through a traceable technical workflow.</p>
+        <div class="actions"><a class="btn primary" href="#disciplines">Explore the workflow</a><a class="btn" href="NgoQuangKiet_CV_FINAL.pdf" target="_blank" rel="noopener">Open CV PDF</a></div>
         <div class="skills" aria-label="Core engineering capabilities">
           <div class="liquid-glass"><b>Mechanical Design</b><small>Siemens NX - modeling - assembly</small></div>
           <div class="liquid-glass"><b>Engineering Simulation</b><small>ANSYS - structural / thermal review</small></div>
-          <div class="liquid-glass"><b>Vehicle Systems</b><small>Diagnostics - OBD/CAN - sensors</small></div>
-          <div class="liquid-glass"><b>R&amp;D Problem Solving</b><small>Field evidence to testable decisions</small></div>
+          <div class="liquid-glass"><b>Electronics</b><small>Controller I/O - sensors - signal paths</small></div>
+          <div class="liquid-glass"><b>Field Investigation</b><small>Real machines - evidence - constraints</small></div>
         </div>
       </div>
       <aside class="profile-card liquid-glass tilt">
         <div class="portrait-frame"><img class="portrait" src="assets/portrait.webp" alt="Ngo Quang Kiet" width="195" height="200"></div>
         <p>From real machines to practical solutions.</p>
-        <span>Observe - model - evaluate - validate</span>
+        <span>Observe - model - evaluate - verify</span>
       </aside>
     </section>
 
     <section id="workflow" class="section reveal">
-      <div class="section-head">
-        <p class="eyebrow">02 / HOW I WORK</p>
-        <h2>ENGINEERING WORKFLOW <span>&amp; KNOWLEDGE SYSTEM</span></h2>
-        <p>GitHub preserves versioned engineering work. Google Drive holds source material and field evidence. Together they keep project state and technical decisions traceable across work sessions.</p>
-      </div>
-
+      <div class="section-head"><p class="eyebrow">02 / HOW I WORK</p><h2>ENGINEERING WORKFLOW <span>&amp; KNOWLEDGE SYSTEM</span></h2><p>GitHub preserves versioned engineering work. Google Drive holds source material and field evidence. Together they keep methods, decisions and review state traceable.</p></div>
       <div class="media-grid workflow-media">
         <article class="liquid-glass media-card tilt">
           <div class="card-kicker"><span class="service-mark github-mark" aria-hidden="true">GH</span><b>GitHub - versioned workspace</b></div>
           <img src="assets/github_real.webp" alt="Real GitHub engineering repository workspace" width="520" height="259">
-          <p>Methods, code, reports and decision history remain reviewable through commits and repository structure.</p>
-          <span class="verification">Real repository capture</span>
+          <p>Methods, code, reports and decision history remain reviewable through commits and repository structure.</p><span class="verification">Real repository capture</span>
         </article>
-
         <article class="liquid-glass media-card drive-card tilt">
           <div class="card-kicker"><span class="service-mark drive-mark" aria-hidden="true"></span><b>Google Drive - source library</b></div>
           <div class="drive-visual" role="img" aria-label="Verified Google Drive source library structure">
@@ -73,88 +57,66 @@
             <div class="drive-row folder"><i aria-hidden="true"></i><b>Survey media</b><small>Photos and observations from site work</small></div>
             <div class="drive-row document"><i aria-hidden="true"></i><b>Review outputs</b><small>Reports, notes and controlled handoffs</small></div>
           </div>
-          <p>A current metadata check confirmed the working library; folder labels are generalized here to keep private file names off the public site.</p>
-          <span class="verification">Connected Drive metadata verified 27 Sep 2026</span>
+          <p>Folder labels are generalized to keep private file names off the public site.</p><span class="verification">Connected Drive metadata verified</span>
         </article>
       </div>
-
       <div class="workflow-flow" aria-label="Engineering workflow">
-        <div class="liquid-glass"><strong>1</strong><b>Source Library</b><p>Manuals, papers, datasheets, field media and raw measurements.</p></div>
-        <div class="liquid-glass"><strong>2</strong><b>Versioned Workspace</b><p>Scope, methods, code and reports stay traceable.</p></div>
-        <div class="liquid-glass"><strong>3</strong><b>Engineering Execution</b><p>NX, ANSYS, electronics, data handling and documentation.</p></div>
-        <div class="liquid-glass"><strong>4</strong><b>Human Verification</b><p>Outputs are checked against sources, field evidence and assumptions.</p></div>
+        <div class="liquid-glass"><strong>1</strong><b>Observe</b><p>Capture source material, machine context and actual constraints.</p></div>
+        <div class="liquid-glass"><strong>2</strong><b>Model</b><p>Translate interfaces and requirements into editable NX geometry.</p></div>
+        <div class="liquid-glass"><strong>3</strong><b>Evaluate</b><p>Use ANSYS and electronics prototypes to test engineering questions.</p></div>
+        <div class="liquid-glass"><strong>4</strong><b>Verify</b><p>Review outputs against assumptions, sources and field evidence.</p></div>
       </div>
-      <p class="note">AI-assisted support is used for research, coding, troubleshooting and documentation; engineering outputs remain manually reviewed.</p>
     </section>
 
-    <section id="cadcae" class="section reveal">
-      <div class="section-head split">
-        <div><p class="eyebrow">03 / CAD &amp; CAE</p><h2>NX <span>&amp; ANSYS</span></h2></div>
-        <p>Open either captured workspace to inspect focused views and the engineering process behind the work.</p>
+    <section id="disciplines" class="section reveal">
+      <div class="section-head split"><div><p class="eyebrow">03 / ENGINEERING PRACTICE</p><h2>FOUR WORKSPACES, <span>ONE PROCESS</span></h2></div><p>Each workspace now opens into its own process page with focused images, step-by-step decisions and clear evidence limits.</p></div>
+      <div class="discipline-grid">
+        <a class="discipline-card liquid-glass tilt" href="nx.html">
+          <span class="tag">SIEMENS NX</span><div class="discipline-collage"><img src="assets/nx-overview.webp" alt="NX workspace overview"><img src="assets/nx-model.webp" alt="NX model detail"></div>
+          <div class="discipline-copy"><span>01</span><h3>NX Design Process</h3><p>Interfaces - feature-based modeling - assembly structure - design review.</p><b>Open NX workflow &#8599;</b></div>
+        </a>
+        <a class="discipline-card liquid-glass tilt" href="ansys.html">
+          <span class="tag">ANSYS MECHANICAL</span><div class="discipline-collage"><img src="assets/ansys-overview.webp" alt="ANSYS workspace overview"><img src="assets/ansys-result.webp" alt="ANSYS result detail"></div>
+          <div class="discipline-copy"><span>02</span><h3>ANSYS Evaluation Process</h3><p>Question - setup - mesh - solution - result interpretation.</p><b>Open ANSYS workflow &#8599;</b></div>
+        </a>
+        <a class="discipline-card liquid-glass tilt" href="electronics.html">
+          <span class="tag">ELECTRONICS &amp; SENSORS</span><div class="discipline-collage"><img src="assets/electronics-overview.webp" alt="Electronics prototype overview"><img src="assets/electronics-signal.webp" alt="Prototype signal path detail"></div>
+          <div class="discipline-copy"><span>03</span><h3>Electronics Process</h3><p>I/O definition - wiring - signal path - prototype checks.</p><b>Open electronics workflow &#8599;</b></div>
+        </a>
+        <a class="discipline-card liquid-glass tilt" href="field.html">
+          <span class="tag">FIELD INVESTIGATION</span><div class="discipline-collage"><img src="assets/field-step-03.webp" alt="Real field survey frame"><img src="assets/field-step-06.webp" alt="Detailed machine inspection frame"></div>
+          <div class="discipline-copy"><span>04</span><h3>Field Survey Process</h3><p>Machine context - operating environment - interfaces - constraints.</p><b>Open field workflow &#8599;</b></div>
+        </a>
       </div>
-      <div class="tool-grid">
-        <button class="tool-card liquid-glass tilt" type="button" data-workflow="nx" aria-haspopup="dialog">
-          <span class="tag">SIEMENS NX</span>
-          <span class="tool-image"><img src="assets/nx.webp" alt="Siemens NX assembly workspace" width="640" height="340"></span>
-          <span class="tool-copy"><strong>3D Modeling &amp; Assembly</strong><span>Model - constrain - inspect - handoff</span></span>
-          <span class="open-hint">Open NX process <span aria-hidden="true">&#8599;</span></span>
-        </button>
-        <button class="tool-card liquid-glass tilt" type="button" data-workflow="ansys" aria-haspopup="dialog">
-          <span class="tag">ANSYS MECHANICAL</span>
-          <span class="tool-image"><img src="assets/ansys.webp" alt="ANSYS Mechanical result workspace" width="640" height="359"></span>
-          <span class="tool-copy"><strong>Engineering Evaluation</strong><span>Question - setup - solve - interpret</span></span>
-          <span class="open-hint">Open ANSYS process <span aria-hidden="true">&#8599;</span></span>
-        </button>
-      </div>
-      <p class="source-note">Detail views are crops of the same local workspace captures. They document software process, not physical validation or final acceptance.</p>
     </section>
 
-    <section id="robex" class="section reveal">
-      <div class="section-head split">
-        <div><p class="eyebrow">04 / ROBEX FIELD INVESTIGATION</p><h2>REAL MACHINE <span>&amp; ACCESS CONTEXT</span></h2></div>
-        <p>Field images document the actual surveyed machine interfaces that shape practical installation and service requirements.</p>
+    <section id="field-preview" class="section reveal">
+      <div class="section-head split"><div><p class="eyebrow">04 / REAL MACHINE EVIDENCE</p><h2>FIELD CONTEXT <span>BEFORE DESIGN</span></h2></div><p>Whole-machine views establish scale and environment. Close inspection converts visible details into packaging and service requirements.</p></div>
+      <div class="field-preview-grid">
+        <figure class="liquid-glass field-photo tilt"><img src="assets/field-step-04.webp" alt="Construction equipment in its real operating environment"><figcaption><b>Operating context</b><span>Terrain, contamination, vibration and access conditions.</span></figcaption></figure>
+        <figure class="liquid-glass field-photo tilt"><img src="assets/hamm-whole-machine.jpeg" alt="Actual HAMM roller field photo"><figcaption><b>Whole-machine survey</b><span>Layout, service zones and packaging constraints.</span></figcaption></figure>
+        <figure class="liquid-glass field-photo tilt"><img src="assets/robex-hands-on-inspection.jpeg" alt="Hands-on inspection of a machine interface"><figcaption><b>Interface inspection</b><span>Cables, components, clearance and maintainability.</span></figcaption></figure>
       </div>
-      <div class="field-grid robex-layout">
-        <figure class="liquid-glass field-photo tilt"><img src="assets/robex-service-access.jpeg" alt="Actual ROBEX R2900LC-7 service access area" width="1432" height="1909"><figcaption><b>Service access survey</b><span>Hose routing, surrounding structure and maintenance clearance on the actual machine.</span></figcaption></figure>
-        <figure class="liquid-glass field-photo tilt"><img src="assets/robex-hands-on-inspection.jpeg" alt="Hands-on inspection of an actual ROBEX machine interface" width="1429" height="1072"><figcaption><b>Hands-on interface inspection</b><span>Visible cable and component interfaces checked before defining requirements.</span></figcaption></figure>
-      </div>
-      <div class="points triple"><div><b>Service access</b><span>Document physical access and surrounding machine structure.</span></div><div><b>Operating context</b><span>Account for dust, vibration, clearance and working conditions.</span></div><div><b>Installation context</b><span>Carry maintenance constraints into later design decisions.</span></div></div>
-    </section>
-
-    <section id="hamm" class="section field-section reveal">
-      <div class="field-copy">
-        <p class="eyebrow">05 / HAMM MACHINE SURVEY</p>
-        <h2>WHOLE-MACHINE <span>SURVEY</span></h2>
-        <p class="lead">Translate physical layout and site conditions into practical packaging, access and serviceability constraints.</p>
-        <div class="points"><div><b>Layout &amp; access</b><span>Understand service zones and accessible areas.</span></div><div><b>Site constraints</b><span>Mud, dust and vibration affect installation choices.</span></div><div><b>Packaging thinking</b><span>Consider mounting space, cable routes and maintenance access.</span></div></div>
-      </div>
-      <figure class="field-photo liquid-glass tilt"><img src="assets/hamm-whole-machine.jpeg" alt="Actual HAMM whole-machine field photo" width="900" height="675"><figcaption><b>Actual HAMM field image</b><span>Whole-machine context in its working environment.</span></figcaption></figure>
+      <div class="section-cta"><a class="btn primary" href="field.html">See the complete field process</a></div>
     </section>
 
     <section id="fuelguard" class="section reveal">
-      <div class="section-head"><p class="eyebrow">06 / INTEGRATED R&amp;D PROJECT</p><h2>FUELGUARD <span>- SYSTEM INTEGRATION</span></h2><p>Field evidence - NX - ANSYS - sensors/electronics - data/diagnostics - validation.</p></div>
-      <div class="media-grid fuel-grid">
-        <article class="liquid-glass media-card tilt"><span class="tag">ELECTRONICS / SENSOR CONTEXT</span><img class="app-shot" src="assets/wokwi.webp" alt="FuelGuard electronics prototype workspace" width="640" height="357"><h3>Prototype signal path</h3><p>Controller I/O, sensor wiring and prototype logic support monitoring experiments before field validation.</p></article>
-        <article class="liquid-glass integration-card tilt">
-          <div><span class="tag">INTEGRATION BOUNDARY</span><h3>One chain, explicit evidence limits.</h3><p>Field observations inform packaging. CAD and analysis shape prototype experiments. Validation remains planned R&amp;D work, not a production claim.</p></div>
-          <ol class="integration-flow"><li><span>01</span>Field</li><li><span>02</span>NX</li><li><span>03</span>ANSYS</li><li><span>04</span>Electronics</li><li><span>05</span>Validation</li></ol>
-        </article>
+      <div class="section-head"><p class="eyebrow">05 / INTEGRATED R&amp;D PROJECT</p><h2>FUELGUARD <span>- SYSTEM INTEGRATION</span></h2><p>A connected engineering chain with explicit boundaries between evidence, design, analysis, prototyping and validation.</p></div>
+      <div class="integration-stage liquid-glass">
+        <div class="integration-visual"><img src="assets/electronics-overview.webp" alt="FuelGuard electronics prototype workspace"><div><span class="tag">PROTOTYPE CONTEXT</span><h3>Signal path and controller I/O</h3><p>Electronics experiments support monitoring work before field validation.</p></div></div>
+        <div class="integration-copy"><span class="tag">INTEGRATION BOUNDARY</span><h3>One chain, explicit evidence limits.</h3><p>Field observations inform packaging. NX translates interfaces into geometry. ANSYS evaluates defined questions. Electronics prototypes explore sensing and signal paths. Validation remains a separate step.</p></div>
+        <ol class="integration-steps"><li><span>01</span><b>Field</b><small>Observe context</small></li><li><span>02</span><b>NX</b><small>Build geometry</small></li><li><span>03</span><b>ANSYS</b><small>Evaluate response</small></li><li><span>04</span><b>Electronics</b><small>Prototype signals</small></li><li><span>05</span><b>Validation</b><small>Verify physically</small></li></ol>
       </div>
     </section>
 
     <section id="contact" class="section contact reveal">
       <div class="contact-card liquid-glass">
-        <div><p class="eyebrow">07 / CONTACT &amp; CV</p><h2>LET'S TALK <span>ENGINEERING</span></h2><p class="lead">Automotive Engineering student at HCMUT with hands-on exposure to field investigation, Siemens NX, ANSYS Mechanical, vehicle diagnostics and sensor-oriented R&amp;D.</p><div class="availability"><i></i>Open to engineering collaboration and internship opportunities</div></div>
+        <div><p class="eyebrow">06 / CONTACT &amp; CV</p><h2>LET'S TALK <span>ENGINEERING</span></h2><p class="lead">Automotive Engineering student at HCMUT with hands-on exposure to field investigation, Siemens NX, ANSYS Mechanical, vehicle diagnostics and sensor-oriented R&amp;D.</p><div class="availability"><i></i>Open to engineering collaboration and internship opportunities</div></div>
         <div class="contact-details"><a href="mailto:ngokiet1412@gmail.com"><small>Email</small><b>ngokiet1412@gmail.com</b></a><a href="tel:+84909224702"><small>Phone</small><b>+84 909 224 702</b></a><div><small>Location</small><b>Ho Chi Minh City, Vietnam</b></div><div class="actions"><a class="btn primary" href="NgoQuangKiet_CV_FINAL.pdf" target="_blank" rel="noopener">Open CV PDF</a><a class="btn" href="https://github.com/ngokiet1412-web" target="_blank" rel="noopener">GitHub</a></div></div>
       </div>
     </section>
   </main>
-
-  <dialog class="workflow-dialog" id="workflow-dialog" aria-labelledby="dialog-title">
-    <button class="dialog-close" type="button" aria-label="Close process">&#215;</button>
-    <div id="dialog-content"></div>
-  </dialog>
   <div class="progress" aria-hidden="true"><span id="bar"></span></div>
-  <script src="script.js?v=20260927-5"></script>
+  <script src="script.js?v=20260927-6"></script>
 </body>
 </html>

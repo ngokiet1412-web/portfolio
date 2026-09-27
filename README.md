@@ -4,15 +4,15 @@ Static portfolio deployed from `main`.
 
 ## CV source custody
 
-- Approved visual source: `D:\cv.jpg`
-- Repository copy: `assets/cv-approved-source.jpg`
-- Locked SHA-256: `716ff6b78460d4582727fe385678a1d65338b80d7e12a36c49ba9c8280fafb5a`
-- Output: one-page A4 `NgoQuangKiet_CV_FINAL.pdf`
+- Approved source: `D:\NgoQuangKiet_CV.pdf`
+- Repository copy: `NgoQuangKiet_CV_FINAL.pdf`
+- Locked SHA-256: `cb012a7985054a0a806418eeb261abd9d093d7de093c849ae39236050064161c`
+- Format: one-page A4 PDF with selectable text
 
-Rebuild with:
+Validate with:
 
 ```powershell
-python scripts/build_cv_pdf.py
+python scripts/validate_cv_pdf.py
 ```
 
-The builder stops if the repository source image no longer matches the approved hash.
+The validator stops if the PDF changes, loses its A4 page geometry, or no longer contains the expected selectable text. It never rebuilds or overwrites the approved file.

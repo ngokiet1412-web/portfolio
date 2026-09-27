@@ -1,35 +1,26 @@
-name: Build CV PDF
+name: Validate CV PDF
 
 on:
   push:
     branches: [main]
     paths:
-      - 'cv.html'
-      - 'assets/cv-approved-source.jpg'
-      - 'scripts/build_cv_pdf.py'
+      - 'NgoQuangKiet_CV_FINAL.pdf'
+      - 'scripts/validate_cv_pdf.py'
       - '.github/workflows/build-cv-pdf.yml'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Build and validate A4 CV PDF
+      - name: Validate approved A4 CV PDF
         run: |
-          python -m pip install --quiet reportlab==4.4.9 pypdf==6.10.0
-          python scripts/build_cv_pdf.py
-      - name: Commit PDF
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add NgoQuangKiet_CV_FINAL.pdf
-          git diff --cached --quiet && exit 0
-          git commit -m 'Build approved CV PDF'
-          git push
+          python -m pip install --quiet pypdf==6.10.0
+          python scripts/validate_cv_pdf.py

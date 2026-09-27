@@ -1,8 +1,38 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ANSYS Mechanical — Ngo Quang Kiet</title><meta name="description" content="Ngo Quang Kiet automotive engineering portfolio - field investigation, Siemens NX, ANSYS, electronics and FuelGuard R&D workflow."><link rel="stylesheet" href="style.css"></head><body><div class="page-enter"><nav class="liquid"><a class="brand" href="index.html"><span class="brandmark">NQK</span><span>Ngo Quang Kiet<small>Automotive Engineering · HCMUT</small></span></a><div class="navlinks"><a class="" href="index.html">Home</a><a class="" href="field.html">Field</a><a class="" href="nx.html">NX</a><a class="active" href="ansys.html">ANSYS</a><a class="" href="electronics.html">Electronics</a><a class="" href="fuelguard.html">FuelGuard</a><a class="cv" href="cv.html" target="_blank">Open CV PDF</a></div></nav><main class="container page">
-<section class="section"><div class="eyebrow">03 · ANSYS Mechanical</div><h1 class="page-title">Use CAE to <span class="grad">check the design.</span></h1><p class="lead">ANSYS is where the CAD model becomes an engineering question: what loads or temperatures matter, how should the model be constrained, what does the result mean, and what should change in the design?</p></section>
-<section class="section reveal"><div class="grid2"><div class="card liquid"><div class="media tall"><img src="assets/ansys.webp" alt="ANSYS structural result"><div class="caption"><b>Structural-analysis workflow</b>Model setup and result inspection for engineering evaluation.</div></div></div><div class="card liquid"><div class="media tall"><img src="assets/ansys.webp" alt="ANSYS thermal analysis"><div class="caption"><b>Thermal-analysis exposure</b>Temperature-field analysis used as a basic thermal evaluation workflow.</div></div></div></div></section>
-<section class="section reveal"><div class="section-head"><div><div class="eyebrow">CAE workflow</div><h2>From engineering question to design decision.</h2></div><p>I use this sequence to keep simulation tied to the physical problem rather than treating the contour plot as the final goal.</p></div><div class="process">
-<div class="step liquid"><div class="n">1</div><h4>Define question</h4><p>What failure mode or design risk are we checking?</p></div><div class="step liquid"><div class="n">2</div><h4>Prepare model</h4><p>Geometry cleanup, contact assumptions and relevant simplifications.</p></div><div class="step liquid"><div class="n">3</div><h4>Material & BCs</h4><p>Assign material, supports, loads or thermal conditions.</p></div><div class="step liquid"><div class="n">4</div><h4>Mesh</h4><p>Choose a mesh appropriate to geometry and the evaluation goal.</p></div><div class="step liquid"><div class="n">5</div><h4>Solve & inspect</h4><p>Read stress, deformation, safety concepts or temperature fields.</p></div><div class="step liquid"><div class="n">6</div><h4>Iterate</h4><p>Use the result to revise geometry or assumptions and re-check.</p></div>
-</div></section>
-<section class="section reveal"><div class="darkband"><div class="grid3"><div><div class="kpi" style="color:#7edfff">Structural</div><p>Static Structural, stress and deformation evaluation.</p></div><div><div class="kpi" style="color:#7edfff">Strength</div><p>Material-strength and safety-factor concepts in design review.</p></div><div><div class="kpi" style="color:#7edfff">Thermal</div><p>Basic thermal-analysis workflow for temperature-related checks.</p></div></div></div></section>
-</main><footer class="footer container"><div class="footerbox liquid"><div><h2>Ngo Quang Kiet</h2><p>Automotive Engineering · R&D · Mechanical Design · Vehicle Diagnostics</p></div><div class="actions"><a class="btn" href="mailto:ngokiet1412@gmail.com">ngokiet1412@gmail.com</a><a class="btn primary" href="cv.html" target="_blank">CV PDF</a></div></div></footer></div><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ANSYS Workflow - Ngo Quang Kiet</title>
+  <meta name="description" content="A step-by-step ANSYS workflow covering engineering questions, simulation setup and result interpretation.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css?v=20260927-6">
+</head>
+<body class="page-shell detail-page">
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+  <header class="top liquid-glass">
+    <a class="brand" href="index.html#profile">NGO QUANG KIET</a>
+    <nav aria-label="Portfolio sections"><a href="index.html#profile">Profile</a><a href="index.html#workflow">Workflow</a><a href="nx.html">NX</a><a href="ansys.html" aria-current="page">ANSYS</a><a href="electronics.html">Electronics</a><a href="field.html">Field</a><a href="index.html#fuelguard">FuelGuard</a></nav>
+    <a class="cv" href="NgoQuangKiet_CV_FINAL.pdf" target="_blank" rel="noopener">Open CV <span aria-hidden="true">&#8599;</span></a>
+  </header>
+
+  <main class="detail-main">
+    <section class="detail-hero reveal">
+      <div class="detail-intro"><p class="eyebrow">03B / ANSYS MECHANICAL</p><h1>QUESTION TO <span>ENGINEERING RESPONSE.</span></h1><p class="lead">Simulation is used to compare defined conditions and guide design decisions — not as a substitute for physical validation.</p><div class="detail-stats"><span><b>01</b> Question</span><span><b>02</b> Setup</span><span><b>03</b> Interpret</span></div></div>
+      <figure class="detail-media liquid-glass"><img src="assets/ansys-overview.webp" alt="ANSYS Mechanical simulation workspace overview"><figcaption>ANSYS Mechanical — source session overview</figcaption></figure>
+    </section>
+
+    <section class="story reveal" aria-labelledby="ansys-process">
+      <div class="section-head split"><div><p class="eyebrow">EVALUATION PROCESS</p><h2 id="ansys-process">ASSUMPTIONS MADE <span>VISIBLE</span></h2></div><p>These focused crops come from the same ANSYS capture. They illustrate the sequence from a bounded question to an interpretable output.</p></div>
+      <article class="story-step liquid-glass"><figure class="story-media"><img src="assets/ansys-overview.webp" alt="Full ANSYS Mechanical simulation session"></figure><div class="story-copy"><span class="step-number">01 / QUESTION</span><h3>Define what the model must answer.</h3><p>Choose a specific structural, thermal or vibration question. The geometry, simplifications and outputs should all serve that question.</p><ul><li>State the comparison or failure mode of interest</li><li>Record geometry and material assumptions</li><li>Choose outputs that support a decision</li></ul></div></article>
+      <article class="story-step reverse liquid-glass"><figure class="story-media"><img src="assets/ansys-setup.webp" alt="Focused ANSYS project tree and setup view"></figure><div class="story-copy"><span class="step-number">02 / SETUP</span><h3>Build a reviewable simulation setup.</h3><p>Materials, contacts, supports, loads and mesh strategy are treated as engineering inputs. Each one must be traceable before the result is interpreted.</p><ul><li>Check contacts and boundary conditions</li><li>Refine mesh where the question requires it</li><li>Review units, load paths and solver messages</li></ul></div></article>
+      <article class="story-step liquid-glass"><figure class="story-media"><img src="assets/ansys-result.webp" alt="Focused ANSYS result contour view"></figure><div class="story-copy"><span class="step-number">03 / INTERPRET</span><h3>Read patterns, not only maxima.</h3><p>Contours help identify where the design responds strongly under the modeled conditions. Results are reviewed against assumptions and used to propose the next design iteration.</p><ul><li>Inspect deformation and stress distribution</li><li>Check whether peaks are physical or numerical</li><li>Carry uncertainty into the design decision</li></ul></div></article>
+      <aside class="evidence-note"><b>Evidence boundary</b><p>A simulation result is evidence for the defined model and assumptions. Physical validation remains a separate engineering step.</p></aside>
+    </section>
+
+    <section class="next-workspace liquid-glass reveal"><div><p class="eyebrow">NEXT WORKSPACE</p><h2>FROM RESPONSE TO <span>SIGNAL PATH.</span></h2></div><a class="btn primary" href="electronics.html">Continue to Electronics &#8594;</a></section>
+  </main>
+  <div class="progress" aria-hidden="true"><span id="bar"></span></div>
+  <script src="script.js?v=20260927-6"></script>
+</body>
+</html>
