@@ -1,0 +1,43 @@
+name: Build CV PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'cv.html'
+      - '.github/workflows/build-cv-pdf.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build PDF from approved CV image
+        run: |
+          python -m pip install --quiet pillow
+          python - <<'PY'
+          import re, base64, io
+          from PIL import Image
+          html=open('cv.html', encoding='utf-8').read()
+          m=re.search(r'data:image/jpeg;base64,([^\"]+)', html)
+          if not m:
+              raise SystemExit('Approved CV image not found in cv.html')
+          img=Image.open(io.BytesIO(base64.b64decode(m.group(1)))).convert('RGB')
+          img.save('NgoQuangKiet_CV_FINAL.pdf','PDF',resolution=150,quality=80,optimize=True)
+          print('Created NgoQuangKiet_CV_FINAL.pdf')
+          PY
+      - name: Commit PDF
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add NgoQuangKiet_CV_FINAL.pdf
+          git diff --cached --quiet && exit 0
+          git commit -m 'Build approved CV PDF'
+          git push
