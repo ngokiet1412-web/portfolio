@@ -1,0 +1,1 @@
+Workflow visuals use the user's actual GitHub/Codex screenshots. This note is not displayed.
