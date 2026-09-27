@@ -6,9 +6,9 @@
   <title>Electronics Workflow - Ngo Quang Kiet</title>
   <meta name="description" content="A practical electronics and sensor workflow from controller I/O definition to prototype signal checks.">
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="style.css?v=20260927-11">
+  <link rel="stylesheet" href="style.css?v=20260927-12">
 </head>
-<body class="page-shell detail-page">
+<body class="page-shell detail-page electronics-page slide-page">
   <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
   <header class="top liquid-glass">
     <a class="brand" href="index.html#profile">NGO QUANG KIET</a>
@@ -32,13 +32,13 @@
       </ol>
     </section>
 
-    <section class="story reveal" aria-labelledby="electronics-process">
-      <div class="section-head split"><div><p class="eyebrow">PROTOTYPE DETAILS</p><h2 id="electronics-process">MAKE THE SIGNAL PATH <span>READABLE</span></h2></div><p>Focused views document different layers of the prototype instead of treating one screenshot as complete proof.</p></div>
-      <article class="story-step liquid-glass"><figure class="story-media"><img src="assets/electronics-overview.webp" alt="Full electronics prototype session"></figure><div class="story-copy"><span class="step-number">01 / DEFINE I/O</span><h3>List every input, output and interface.</h3><p>Start with the measurement need, expected signal type and controller limits. Pin assignments and power domains are documented before wiring.</p><ul><li>Define signal range and sample needs</li><li>Separate power, ground and data paths</li><li>Record controller and sensor assumptions</li></ul></div></article>
-      <article class="story-step reverse liquid-glass"><figure class="story-media"><img src="assets/electronics-io.webp" alt="Focused controller input and output view"></figure><div class="story-copy"><span class="step-number">02 / CONNECT</span><h3>Build the prototype signal path.</h3><p>Connect components in a controlled workspace and keep the diagram synchronized with the implementation. This makes troubleshooting faster and reduces ambiguous wiring.</p><ul><li>Trace connections end to end</li><li>Keep labels consistent with software names</li><li>Check protection and interface boundaries</li></ul></div></article>
-      <article class="story-step liquid-glass"><figure class="story-media"><img src="assets/electronics-signal.webp" alt="Focused prototype signal path view"></figure><div class="story-copy"><span class="step-number">03 / CHECK</span><h3>Observe behavior before field use.</h3><p>Bench checks confirm that logic and signal handling behave as expected under controlled conditions. Field suitability, durability and acceptance remain separate work.</p><ul><li>Exercise normal and edge conditions</li><li>Compare observed values with expectations</li><li>Log issues and revise the design</li></ul></div></article>
-      <article class="story-step reverse liquid-glass"><figure class="story-media electronics-contain"><img src="assets/wokwi.webp" alt="Wokwi prototype diagram workspace"></figure><div class="story-copy"><span class="step-number">04 / TRACE</span><h3>Keep the prototype logic inspectable.</h3><p>The diagram workspace keeps controller connections and prototype behavior visible during iteration. It is a development aid, not a substitute for hardware or machine validation.</p><ul><li>Trace each connection against the I/O map</li><li>Keep diagram labels aligned with code</li><li>Record changes before the next test</li></ul></div></article>
-      <aside class="evidence-note"><b>Evidence boundary</b><p>Prototype and simulation views demonstrate workflow and logic exploration. They do not independently prove machine installation or field acceptance.</p></aside>
+    <section class="prototype-slide reveal" aria-labelledby="electronics-process">
+      <div class="section-head split"><div><p class="eyebrow">PROTOTYPE DETAILS</p><h2 id="electronics-process">ONE SOURCE, <span>SHOWN ONCE</span></h2></div><p>The available electronics capture is kept as a single complete frame. No enlarged crops are presented as additional evidence.</p></div>
+      <div class="prototype-layout liquid-glass">
+        <div class="prototype-map" aria-label="Prototype review sequence"><span><b>01</b>Define I/O</span><i></i><span><b>02</b>Connect</span><i></i><span><b>03</b>Check</span><i></i><span><b>04</b>Record</span></div>
+        <div class="prototype-copy"><span class="step-number">CONTROLLED PROTOTYPE REVIEW</span><h3>Make every assumption traceable.</h3><p>Start from the measurement need, map the controller interface, trace each connection and compare observed behavior with the expected response.</p><ul><li>Document signal range, power and ground</li><li>Keep diagram labels aligned with software names</li><li>Log issues and revise before physical validation</li></ul></div>
+      </div>
+      <aside class="evidence-note"><b>Evidence boundary</b><p>The single prototype view demonstrates logic exploration only. It does not independently prove hardware integration, machine installation or field acceptance.</p></aside>
     </section>
 
     <section class="prototype-review reveal" aria-labelledby="review-gates">
@@ -52,6 +52,6 @@
     <section class="next-workspace liquid-glass reveal"><div><p class="eyebrow">NEXT WORKSPACE</p><h2>THE MACHINE SETS <span>THE CONSTRAINTS.</span></h2></div><a class="btn primary" href="field.html">Continue to Field &#8594;</a></section>
   </main>
   <div class="progress" aria-hidden="true"><span id="bar"></span></div>
-  <script src="script.js?v=20260927-11"></script>
+  <script src="script.js?v=20260927-12"></script>
 </body>
 </html>
