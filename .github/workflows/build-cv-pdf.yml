@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'cv.html'
+      - 'scripts/build_cv_pdf.py'
       - '.github/workflows/build-cv-pdf.yml'
   workflow_dispatch:
 
@@ -19,22 +20,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Build PDF from approved CV image
+      - name: Build and validate A4 CV PDF
         run: |
-          python -m pip install --quiet pillow
-          python - <<'PY'
-          import re, base64, io
-          from PIL import Image, ImageFile
-          ImageFile.LOAD_TRUNCATED_IMAGES = True
-          html=open('cv.html', encoding='utf-8').read()
-          m=re.search(r'data:image/jpeg;base64,([^\"]+)', html)
-          if not m:
-              raise SystemExit('Approved CV image not found in cv.html')
-          raw=base64.b64decode(m.group(1))
-          img=Image.open(io.BytesIO(raw)).convert('RGB')
-          img.save('NgoQuangKiet_CV_FINAL.pdf','PDF',resolution=150,quality=80,optimize=True)
-          print('Created NgoQuangKiet_CV_FINAL.pdf')
-          PY
+          python -m pip install --quiet reportlab==4.4.9 pypdf==6.10.0
+          python scripts/build_cv_pdf.py
       - name: Commit PDF
         run: |
           git config user.name 'github-actions[bot]'
