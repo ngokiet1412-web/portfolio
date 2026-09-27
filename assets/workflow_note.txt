@@ -1,1 +1,1 @@
-Workflow visuals use the user's actual GitHub/Codex screenshots. This note is not displayed.
+The GitHub card uses the local real repository capture. The Drive card is a privacy-safe visual derived from connected Drive metadata verified on 2026-09-27; private file names are not published.

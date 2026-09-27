@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'cv.html'
+      - 'assets/cv-approved-source.jpg'
       - 'scripts/build_cv_pdf.py'
       - '.github/workflows/build-cv-pdf.yml'
   workflow_dispatch:

@@ -1,1 +1,2 @@
-CV is being updated to the latest version supplied by the user.
+The CV PDF is generated directly from assets/cv-approved-source.jpg without redesign or content reconstruction.
+Approved source SHA-256: 716ff6b78460d4582727fe385678a1d65338b80d7e12a36c49ba9c8280fafb5a
