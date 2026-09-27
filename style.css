@@ -215,13 +215,21 @@ h3 { margin: 0; }
 .discipline-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 .discipline-card { --rx: 0deg; --ry: 0deg; position: relative; overflow: hidden; min-width: 0; padding: 15px; border-radius: var(--radius); text-decoration: none; transform: perspective(1100px) rotateX(var(--rx)) rotateY(var(--ry)); transition: transform .24s ease, box-shadow .24s ease; }
 .discipline-card:hover { box-shadow: 0 30px 74px rgba(11,86,137,.2), inset 0 1px 0 #fff; }
-.discipline-collage { display: grid; grid-template-columns: 1.45fr .55fr; gap: 7px; height: 275px; overflow: hidden; border-radius: 19px; background: #dbeaf3; }
-.discipline-collage img { width: 100%; height: 100%; object-fit: cover; }
+.discipline-preview { height: 300px; overflow: hidden; border-radius: 19px; background: #dbeaf3; }
+.discipline-preview img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .discipline-copy { display: grid; grid-template-columns: auto 1fr; column-gap: 13px; padding: 18px 5px 5px; }
 .discipline-copy > span { grid-row: 1 / 4; color: var(--blue); font-size: 11px; font-weight: 950; }
 .discipline-copy h3 { font-size: clamp(20px, 2.5vw, 30px); letter-spacing: -.035em; }
 .discipline-copy p { margin: 6px 0 13px; color: var(--muted); font-size: 13px; }
 .discipline-copy b { color: var(--blue); font-size: 11px; letter-spacing: .035em; text-transform: uppercase; }
+
+.portfolio-board { overflow: hidden; margin: 26px 0; padding: 12px; border-radius: 30px; }
+.portfolio-board > img { width: 100%; height: auto; border-radius: 20px; background: #dbeaf3; }
+.portfolio-board figcaption { display: flex; justify-content: space-between; gap: 24px; padding: 14px 8px 5px; }
+.portfolio-board figcaption b { font-size: 13px; }
+.portfolio-board figcaption span { max-width: 680px; color: var(--muted); font-size: 11px; text-align: right; }
+.portrait-board { width: min(100%, 820px); margin-inline: auto; }
+.field-board-detail { margin-bottom: 70px; }
 
 .field-preview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .field-preview-grid .field-photo img { min-height: 315px; aspect-ratio: 4 / 3; }
@@ -320,7 +328,7 @@ h3 { margin: 0; }
   .focus-shot img { aspect-ratio: 16 / 8.8; }
   .contact-card { gap: 24px; }
   .discipline-grid, .field-preview-grid, .detail-hero, .story-step, .story-step.reverse { grid-template-columns: minmax(0, 1fr); }
-  .discipline-collage { height: 245px; }
+  .discipline-preview { height: 245px; }
   .integration-stage { grid-template-columns: minmax(0, 1fr); }
   .integration-copy { padding: 6px 4px; }
   .integration-steps { grid-column: auto; grid-template-columns: 1fr; }
@@ -344,8 +352,11 @@ h3 { margin: 0; }
   .robex-layout .field-photo:first-child img, .robex-layout .field-photo:last-child img { aspect-ratio: 4 / 3; }
   .drive-row { padding-inline: 11px; }
   .progress { display: none; }
-  .discipline-collage { grid-template-columns: 1fr; height: 310px; }
-  .discipline-collage img:last-child { display: none; }
+  .discipline-preview { height: 260px; }
+  .portfolio-board { padding: 8px; border-radius: 22px; }
+  .portfolio-board > img { border-radius: 15px; }
+  .portfolio-board figcaption { align-items: flex-start; flex-direction: column; gap: 4px; }
+  .portfolio-board figcaption span { text-align: left; }
   .field-preview-grid .field-photo img { min-height: 260px; }
   .story-gallery.two { grid-template-columns: 1fr; }
   .story-gallery img { height: 250px; }
