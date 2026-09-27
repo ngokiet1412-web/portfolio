@@ -6,7 +6,7 @@
   <title>Electronics Workflow - Ngo Quang Kiet</title>
   <meta name="description" content="A practical electronics and sensor workflow from controller I/O definition to prototype signal checks.">
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="style.css?v=20260927-7">
+  <link rel="stylesheet" href="style.css?v=20260927-11">
 </head>
 <body class="page-shell detail-page">
   <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
@@ -22,17 +22,36 @@
       <figure class="detail-media liquid-glass"><img src="assets/electronics-overview.webp" alt="Electronics and sensor prototype workspace overview"><figcaption>Prototype electronics workspace — source session overview</figcaption></figure>
     </section>
 
+    <section class="signal-section reveal" aria-labelledby="signal-chain">
+      <div class="section-head split"><div><p class="eyebrow">SIGNAL ARCHITECTURE</p><h2 id="signal-chain">FOLLOW THE SIGNAL, <span>END TO END</span></h2></div><p>A useful electronics view does more than show wires. It explains what is measured, how the signal reaches the controller and where each assumption must be checked.</p></div>
+      <ol class="signal-chain">
+        <li class="liquid-glass"><span>01</span><b>Measurement</b><p>Define the physical quantity, expected range and useful sampling behavior.</p></li>
+        <li class="liquid-glass"><span>02</span><b>Sensor &amp; interface</b><p>Identify power, ground, signal type and any conditioning or protection needs.</p></li>
+        <li class="liquid-glass"><span>03</span><b>Controller I/O</b><p>Map pins, logic levels and software names so the diagram and implementation agree.</p></li>
+        <li class="liquid-glass"><span>04</span><b>Observed response</b><p>Exercise known inputs, compare the output and record deviations for revision.</p></li>
+      </ol>
+    </section>
+
     <section class="story reveal" aria-labelledby="electronics-process">
-      <div class="section-head split"><div><p class="eyebrow">PROTOTYPE DETAILS</p><h2 id="electronics-process">MAKE THE SIGNAL PATH <span>READABLE</span></h2></div><p>All three images are focused views of the same captured prototype session. They explain different layers of the signal path.</p></div>
+      <div class="section-head split"><div><p class="eyebrow">PROTOTYPE DETAILS</p><h2 id="electronics-process">MAKE THE SIGNAL PATH <span>READABLE</span></h2></div><p>Focused views document different layers of the prototype instead of treating one screenshot as complete proof.</p></div>
       <article class="story-step liquid-glass"><figure class="story-media"><img src="assets/electronics-overview.webp" alt="Full electronics prototype session"></figure><div class="story-copy"><span class="step-number">01 / DEFINE I/O</span><h3>List every input, output and interface.</h3><p>Start with the measurement need, expected signal type and controller limits. Pin assignments and power domains are documented before wiring.</p><ul><li>Define signal range and sample needs</li><li>Separate power, ground and data paths</li><li>Record controller and sensor assumptions</li></ul></div></article>
       <article class="story-step reverse liquid-glass"><figure class="story-media"><img src="assets/electronics-io.webp" alt="Focused controller input and output view"></figure><div class="story-copy"><span class="step-number">02 / CONNECT</span><h3>Build the prototype signal path.</h3><p>Connect components in a controlled workspace and keep the diagram synchronized with the implementation. This makes troubleshooting faster and reduces ambiguous wiring.</p><ul><li>Trace connections end to end</li><li>Keep labels consistent with software names</li><li>Check protection and interface boundaries</li></ul></div></article>
       <article class="story-step liquid-glass"><figure class="story-media"><img src="assets/electronics-signal.webp" alt="Focused prototype signal path view"></figure><div class="story-copy"><span class="step-number">03 / CHECK</span><h3>Observe behavior before field use.</h3><p>Bench checks confirm that logic and signal handling behave as expected under controlled conditions. Field suitability, durability and acceptance remain separate work.</p><ul><li>Exercise normal and edge conditions</li><li>Compare observed values with expectations</li><li>Log issues and revise the design</li></ul></div></article>
+      <article class="story-step reverse liquid-glass"><figure class="story-media electronics-contain"><img src="assets/wokwi.webp" alt="Wokwi prototype diagram workspace"></figure><div class="story-copy"><span class="step-number">04 / TRACE</span><h3>Keep the prototype logic inspectable.</h3><p>The diagram workspace keeps controller connections and prototype behavior visible during iteration. It is a development aid, not a substitute for hardware or machine validation.</p><ul><li>Trace each connection against the I/O map</li><li>Keep diagram labels aligned with code</li><li>Record changes before the next test</li></ul></div></article>
       <aside class="evidence-note"><b>Evidence boundary</b><p>Prototype and simulation views demonstrate workflow and logic exploration. They do not independently prove machine installation or field acceptance.</p></aside>
+    </section>
+
+    <section class="prototype-review reveal" aria-labelledby="review-gates">
+      <div class="section-head"><p class="eyebrow">ENGINEERING REVIEW</p><h2 id="review-gates">WHAT IS KNOWN — <span>AND WHAT COMES NEXT</span></h2></div>
+      <div class="review-grid">
+        <article class="review-panel liquid-glass"><span class="review-label confirmed">PROTOTYPE EVIDENCE</span><h3>What these views support</h3><ul><li>A defined controller-oriented signal path</li><li>Visible wiring and I/O relationships</li><li>A repeatable environment for logic checks</li><li>Documented assumptions for the next revision</li></ul></article>
+        <article class="review-panel liquid-glass"><span class="review-label pending">FIELD VERIFICATION</span><h3>What still requires physical evidence</h3><ul><li>Actual machine interface and installation point</li><li>Electrical compatibility and protection</li><li>Noise, vibration, temperature and durability</li><li>Measured performance under operating conditions</li></ul></article>
+      </div>
     </section>
 
     <section class="next-workspace liquid-glass reveal"><div><p class="eyebrow">NEXT WORKSPACE</p><h2>THE MACHINE SETS <span>THE CONSTRAINTS.</span></h2></div><a class="btn primary" href="field.html">Continue to Field &#8594;</a></section>
   </main>
   <div class="progress" aria-hidden="true"><span id="bar"></span></div>
-  <script src="script.js?v=20260927-7"></script>
+  <script src="script.js?v=20260927-11"></script>
 </body>
 </html>
