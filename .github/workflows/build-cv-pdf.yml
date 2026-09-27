@@ -24,12 +24,14 @@ jobs:
           python -m pip install --quiet pillow
           python - <<'PY'
           import re, base64, io
-          from PIL import Image
+          from PIL import Image, ImageFile
+          ImageFile.LOAD_TRUNCATED_IMAGES = True
           html=open('cv.html', encoding='utf-8').read()
           m=re.search(r'data:image/jpeg;base64,([^\"]+)', html)
           if not m:
               raise SystemExit('Approved CV image not found in cv.html')
-          img=Image.open(io.BytesIO(base64.b64decode(m.group(1)))).convert('RGB')
+          raw=base64.b64decode(m.group(1))
+          img=Image.open(io.BytesIO(raw)).convert('RGB')
           img.save('NgoQuangKiet_CV_FINAL.pdf','PDF',resolution=150,quality=80,optimize=True)
           print('Created NgoQuangKiet_CV_FINAL.pdf')
           PY
