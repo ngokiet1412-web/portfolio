@@ -38,7 +38,6 @@ let scrollFrame = 0;
 function updateProgress() {
   const maximum = document.documentElement.scrollHeight - innerHeight;
   if (progressBar) progressBar.style.height = `${maximum > 0 ? scrollY / maximum * 100 : 0}%`;
-  if (!reducedMotion) document.documentElement.style.setProperty('--scroll-shift', `${Math.max(-30, scrollY * -.018)}`);
   scrollFrame = 0;
 }
 addEventListener('scroll', () => {
@@ -111,20 +110,13 @@ if (slideTargets.length) {
   slideTargets.forEach((section) => slideObserver.observe(section));
 
   if (!reducedMotion && matchMedia('(pointer:fine)').matches) {
-    let slideLocked = false;
     const goToSlide = (direction) => {
       const next = Math.max(0, Math.min(slideTargets.length - 1, activeSlide + direction));
       if (next === activeSlide) return false;
-      slideLocked = true;
       setActiveSlide(next);
       slideTargets[next].scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setTimeout(() => { slideLocked = false; }, 760);
       return true;
     };
-    addEventListener('wheel', (event) => {
-      if (slideLocked || Math.abs(event.deltaY) < 12) { if (slideLocked) event.preventDefault(); return; }
-      if (goToSlide(event.deltaY > 0 ? 1 : -1)) event.preventDefault();
-    }, { passive: false });
     addEventListener('keydown', (event) => {
       if (!['ArrowDown', 'PageDown', 'ArrowUp', 'PageUp'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey) return;
       if (goToSlide(event.key === 'ArrowDown' || event.key === 'PageDown' ? 1 : -1)) event.preventDefault();
