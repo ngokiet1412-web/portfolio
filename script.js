@@ -95,11 +95,22 @@ if (slideTargets.length) {
   document.body.append(cue);
 
   let activeSlide = 0;
+  const reportedSlides = new Set();
   const setActiveSlide = (index) => {
     activeSlide = index;
     slideTargets.forEach((section, current) => section.classList.toggle('slide-active', current === index));
     slideButtons.forEach((button, current) => current === index ? button.setAttribute('aria-current', 'true') : button.removeAttribute('aria-current'));
     cue.textContent = index === slideTargets.length - 1 ? 'END OF PAGE' : 'SCROLL TO NEXT VIEW';
+    if (!reportedSlides.has(index) && typeof window.gtag === 'function') {
+      reportedSlides.add(index);
+      const label = slideTargets[index].querySelector('.eyebrow, .step-number')?.textContent.trim() || `Slide ${index + 1}`;
+      gtag('event', 'slide_view', {
+        page_path: location.pathname,
+        slide_index: index + 1,
+        slide_label: label.slice(0, 80),
+        slide_total: slideTargets.length
+      });
+    }
   };
   setActiveSlide(0);
 
